@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cd4xfjv26xaeq"]
 
 [ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://scenes/player/Player.tscn" id="1_gy11q"]
+[ext_resource type="PackedScene" uid="uid://07iwtt0ogy8o" path="res://characters/monstre1/monstre1.tscn" id="2_nnvai"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_nnvai"]
 
@@ -26,3 +27,6 @@ size = 8.0
 
 [node name="Player" parent="." unique_id=1762694975 instance=ExtResource("1_gy11q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1677012, 0)
+
+[node name="Ch14_nonPBR" parent="." unique_id=1918294850 instance=ExtResource("2_nnvai")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0)
