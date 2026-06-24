@@ -46,7 +46,7 @@ func apply_gravity(delta: float) -> void:
 		velocity.y -= gravity * delta
 	else:
 		if velocity.y < 0:
-			velocity.y = 0
+			velocity.y = 0.0
 
 func apply_jump() -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
