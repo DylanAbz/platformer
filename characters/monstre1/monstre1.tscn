@@ -2,9 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://dn6e72bsqg15y" path="res://characters/monstre1/Ch14_nonPBR.fbx" id="1_ifwwi"]
 [ext_resource type="Script" uid="uid://dx0t4xf13i7nv" path="res://characters/monstre1/monstre_1.gd" id="2_402pn"]
+<<<<<<< HEAD
+<<<<<<< HEAD
+[ext_resource type="Animation" uid="uid://cfci1gk20fm4c" path="res://characters/monstre1/hiphop.anim" id="2_igar1"]
+[ext_resource type="Animation" uid="uid://ucvud7qib4ep" path="res://characters/monstre1/sadle.anim" id="3_402pn"]
+=======
 [ext_resource type="Animation" uid="uid://dnsrcosrmigb3" path="res://characters/monstre1/hiphop.anim" id="2_igar1"]
 [ext_resource type="Animation" uid="uid://5mkhcn34tt35" path="res://characters/monstre1/sadle.anim" id="3_402pn"]
+<<<<<<< HEAD
+[ext_resource type="AudioStream" uid="uid://chp8t6qpxmo4k" path="res://characters/monstre1/super-smash-bros-pokemon-victory.ogg" id="5_rrbu2"]
+>>>>>>> 33caeb4 (music)
+=======
+[ext_resource type="Animation" uid="uid://dnsrcosrmigb3" path="res://characters/monstre1/hiphop.anim" id="2_igar1"]
+[ext_resource type="Animation" uid="uid://5mkhcn34tt35" path="res://characters/monstre1/sadle.anim" id="3_402pn"]
+>>>>>>> b181706 (début level2)
+=======
 [ext_resource type="AudioStream" uid="uid://dpl0vipxfwdh5" path="res://characters/monstre1/ref-gitan.ogg" id="5_rrbu2"]
+>>>>>>> da6dd54 (méchant)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rrbu2"]
 _data = {

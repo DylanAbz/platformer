@@ -2,6 +2,56 @@
 
 [ext_resource type="Script" uid="uid://cmaux06xbyupg" path="res://scripts/menu/main_menu.gd" id="1_m2yvp"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2yvp"]
+bg_color = Color(0.9953138, 0.29953265, 0.5389477, 1)
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color(0.99607843, 0.29803923, 0.5372549, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2nud1"]
+bg_color = Color(0.62352943, 0.007843138, 0.2901961, 1)
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color(0.62352943, 0.007843138, 0.2901961, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwj7d"]
+bg_color = Color(0.62352943, 0.007843138, 0.2901961, 1)
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color(0.62352943, 0.007843138, 0.2901961, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3dsm"]
+bg_color = Color(1, 0.5254902, 0.21176471, 1)
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color(1, 0.52156866, 0.21568628, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgsx5"]
+bg_color = Color(1, 0.52156866, 0.21568628, 1)
+border_width_top = 5
+border_width_bottom = 5
+border_color = Color(1, 0.52156866, 0.21568628, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
 [node name="MainMenu" type="Control" unique_id=1449748875]
 layout_mode = 3
 anchors_preset = 8
@@ -14,6 +64,15 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_m2yvp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1923991165]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.94142747, 0.8483777, 1, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1648973953]
 layout_mode = 1
@@ -35,11 +94,24 @@ theme_override_constants/separation = 4
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=494633923]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.60784316, 0.9647059, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 28
+text = "Homer Bros"
 
 [node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1243116748]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_m2yvp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2nud1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uwj7d")
 text = "Jouer"
 
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=872811636]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_s3dsm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mgsx5")
 text = "Quitter"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

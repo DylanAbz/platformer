@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://beb7qt3vt0fkh" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Body_STT.png" id="5_v42im"]
 [ext_resource type="AnimationLibrary" uid="uid://clg8imub27eo8" path="res://characters/homer-simpson-fortnite-skin/animations/homer_anims.res" id="6_anim"]
 [ext_resource type="PackedScene" uid="uid://co418401y3bu7" path="res://assets/cannabis-joints/source/Joints.fbx" id="7_joint"]
+[ext_resource type="PackedScene" uid="uid://co418401y3bu7" path="res://assets/cannabis-joints/source/Joints.fbx" id="7_joint"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pn6s4"]
 albedo_texture = ExtResource("2_tpg5x")
@@ -29,6 +30,7 @@ script = ExtResource("1_c3xxp")
 [node name="Model" parent="." unique_id=701740308 instance=ExtResource("1_wr5hl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93063843, 0)
 
+[node name="M_MED_SilentNovel_Vane_LOD0" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D" parent_id_path=PackedInt32Array(701740308, 1016596023) index="0" unique_id=148790747]
 [node name="Skeleton3D" parent="Model/M_MED_SilentNovel_Vane" parent_id_path=PackedInt32Array(701740308, 738459950) index="0" unique_id=1008003535]
 bones/1/position = Vector3(-0.0016121431, 0.90189, 0.008454928)
 bones/1/rotation = Quaternion(-0.035135638, -0.023836961, 0.00019645593, 0.9990983)
@@ -60,6 +62,7 @@ surface_material_override/1 = SubResource("StandardMaterial3D_7oing")
 surface_material_override/2 = SubResource("StandardMaterial3D_5stf6")
 surface_material_override/3 = SubResource("StandardMaterial3D_180ig")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Model" unique_id=1982211626]
 [node name="JointAttach" type="BoneAttachment3D" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D" index="1" unique_id=685920088]
 transform = Transform3D(0.2585645, 0.6220886, 0.7390199, 0.80102885, 0.28951013, -0.5239623, -0.5399048, 0.72745454, -0.42345372, -0.041794956, 1.1277591, 0.13252383)
 bone_name = "RightHand"
