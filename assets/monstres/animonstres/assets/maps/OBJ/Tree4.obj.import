@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qh8bpukew3ot"
+path="res://.godot/imported/Tree4.obj-d4f16599b887596f9e9d081eac4b167f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tree4.obj-d4f16599b887596f9e9d081eac4b167f.mesh"]
+
+source_file="res://assets/maps/OBJ/Tree4.obj"
+dest_files=["res://.godot/imported/Tree4.obj-d4f16599b887596f9e9d081eac4b167f.mesh", "res://.godot/imported/Tree4.obj-d4f16599b887596f9e9d081eac4b167f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

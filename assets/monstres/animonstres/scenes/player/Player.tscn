@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b035fodg8tfp7"]
+
+[ext_resource type="PackedScene" uid="uid://1veplp1ro34w" path="res://characters/homer-simpson-fortnite-skin/source/Homer Simpson.fbx" id="1_wr5hl"]
+[ext_resource type="Texture2D" uid="uid://bpfnnrjanrjwm" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Body_CL.png" id="2_tpg5x"]
+[ext_resource type="Texture2D" uid="uid://rl4r2ave7fcv" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Head_CL.png" id="3_c3xxp"]
+[ext_resource type="Texture2D" uid="uid://cib581tyivrq2" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Head_DFL.png" id="4_npwbq"]
+[ext_resource type="Texture2D" uid="uid://beb7qt3vt0fkh" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Body_STT.png" id="5_v42im"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pn6s4"]
+albedo_texture = ExtResource("2_tpg5x")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7oing"]
+albedo_texture = ExtResource("3_c3xxp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5stf6"]
+albedo_texture = ExtResource("4_npwbq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_180ig"]
+albedo_texture = ExtResource("5_v42im")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfjak"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1762694975]
+
+[node name="Model" parent="." unique_id=701740308 instance=ExtResource("1_wr5hl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93063843, 0)
+
+[node name="M_MED_SilentNovel_Vane_LOD0" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D" parent_id_path=PackedInt32Array(701740308, 1414303306) index="0" unique_id=1431430827]
+surface_material_override/0 = SubResource("StandardMaterial3D_pn6s4")
+surface_material_override/1 = SubResource("StandardMaterial3D_7oing")
+surface_material_override/2 = SubResource("StandardMaterial3D_5stf6")
+surface_material_override/3 = SubResource("StandardMaterial3D_180ig")
+
+[node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1586536971]
+shape = SubResource("CapsuleShape3D_gfjak")
+
+[editable path="Model"]
