@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dg7w8oj0xccv"]
 
+[ext_resource type="ArrayMesh" uid="uid://dxgysdebftij5" path="res://assets/maps/OBJ/Platform_BottomLeft.obj" id="1_aekvj"]
 [ext_resource type="ArrayMesh" uid="uid://dd1jbcinbgpao" path="res://assets/maps/OBJ/Grass1.obj" id="2_vfrjh"]
 [ext_resource type="ArrayMesh" uid="uid://cr1tinqn0pth4" path="res://assets/maps/OBJ/Grass2.obj" id="3_ubdp6"]
 [ext_resource type="ArrayMesh" uid="uid://b746y5qyrhpj0" path="res://assets/maps/OBJ/Grass.obj" id="4_0dv4q"]
@@ -11,7 +12,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_wug0r"]
 size = Vector3(1.7353516, 0.5328369, 3.111145)
 
-[node name="PlatformBottomLeft" type="StaticBody3D" unique_id=1126508271]
+[node name="PlatformBottomLeft" type="StaticBody3D" unique_id=3334582]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=603268761]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10205078, 0.74420166, 0.009979248)
@@ -54,7 +55,7 @@ transform = Transform3D(0.9998406, 0, -0.01785377, 0, 1, 0, 0.01785377, 0, 0.999
 mesh = ExtResource("3_ubdp6")
 
 [node name="Grass9" type="MeshInstance3D" parent="." unique_id=1137195834]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7884161, -1.4327271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7884161, -1.3575978)
 mesh = ExtResource("4_0dv4q")
 
 [node name="Grass10" type="MeshInstance3D" parent="." unique_id=1788721055]
@@ -166,7 +167,7 @@ transform = Transform3D(0.99797356, 0.06108338, -0.01782043, -0.061073646, 0.998
 mesh = ExtResource("3_ubdp6")
 
 [node name="Grass24" type="MeshInstance3D" parent="." unique_id=208983979]
-transform = Transform3D(0.99813265, 0.06108338, 0, -0.06108338, 0.99813265, 0, 0, 0, 1, 0.5134505, 0.7884059, -1.4327271)
+transform = Transform3D(0.99813265, 0.06108338, 0, -0.06108338, 0.99813265, 0, 0, 0, 1, 0.5134505, 0.7884059, -1.3440702)
 mesh = ExtResource("4_0dv4q")
 
 [node name="Grass25" type="MeshInstance3D" parent="." unique_id=79479422]
@@ -300,3 +301,7 @@ mesh = ExtResource("7_jlssg")
 [node name="Tree2" type="MeshInstance3D" parent="." unique_id=1829297823]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5445657, 1.0066648, 1.3425736)
 mesh = ExtResource("8_xnehm")
+
+[node name="PlatformBottomLeft" type="MeshInstance3D" parent="." unique_id=169859224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03051114, 0.011715629, 0.030320594)
+mesh = ExtResource("1_aekvj")

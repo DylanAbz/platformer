@@ -2,22 +2,28 @@
 
 [ext_resource type="PackedScene" uid="uid://dg7w8oj0xccv" path="res://assets/maps/level/start_platform.tscn" id="1_1omn2"]
 [ext_resource type="PackedScene" uid="uid://bnvtlbp1mg4nl" path="res://assets/maps/level/yellow_box.tscn" id="2_smh62"]
-[ext_resource type="ArrayMesh" uid="uid://bosko4jsdypub" path="res://assets/maps/OBJ/Platform_TopLeft.obj" id="3_smh62"]
+[ext_resource type="ArrayMesh" uid="uid://bwld4815md55j" path="res://assets/maps/OBJ/Platform_TopMiddle.obj" id="3_ywuck"]
+[ext_resource type="ArrayMesh" uid="uid://qh8bpukew3ot" path="res://assets/maps/OBJ/Tree4.obj" id="4_62clm"]
+[ext_resource type="ArrayMesh" uid="uid://3h8l0e8x4hkd" path="res://assets/maps/OBJ/Sign_Right.obj" id="5_a877o"]
+[ext_resource type="ArrayMesh" uid="uid://bf8itscj4rdpg" path="res://assets/maps/OBJ/Rock4.obj" id="6_etgam"]
 
-[sub_resource type="Sky" id="Sky_xc20r"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_getar"]
+points = PackedVector3Array(-0.98204446, 0.87129456, -1.1650296, 0.98980975, 0.39972362, 1.7164918, 0.9741095, 0.12955841, 1.6893294, 0.98983884, 0.39973542, -1.7165422, -0.99912214, -0.99912214, -1.5627824, -0.9990621, -0.9990621, 1.5626882, 0.99443626, -0.99912214, -1.5627824, -0.9873198, 0.66311425, 1.5442784, 0.99437624, -0.9990621, 1.5626882, 0.96720564, 0.96720564, 0.6813967, -0.9945379, 0.39974076, -1.7165651, 0.9773586, 0.87129456, -1.1650296, -0.9718915, 0.96720564, 0.6813967, -0.9945088, 0.39972898, 1.7165147, -0.9718915, 0.96720564, -0.6813967, 0.98178864, 0.8220695, 1.2769612, 0.96720564, 0.96720564, -0.6813967, -0.9873675, 0.66314644, -1.544353, -0.98204446, 0.87129456, 1.1650296, 0.9934361, 0.50899774, -1.6688029, 0.99338794, 0.508973, 1.6687222, 0.9749126, 0.7107016, -1.4792135, -0.9981526, 0.5090135, -1.6688542, 0.98260367, 0.66309375, 1.5442308, -0.99810445, 0.50898874, 1.6687735, 0.9773586, 0.87129456, 1.1650296, -0.98648286, 0.8220765, -1.2769719, 0.9741138, 0.12955901, -1.6893369, -0.9795684, 0.7106797, 1.479168, 0.9826513, 0.66312593, -1.5443056, -0.9864745, 0.8220695, 1.2769612, 0.981797, 0.8220765, -1.2769719)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ywuck"]
+
+[sub_resource type="Sky" id="Sky_62clm"]
+sky_material = SubResource("ProceduralSkyMaterial_ywuck")
+process_mode = 1
 
 [sub_resource type="Environment" id="Environment_th1pm"]
 background_mode = 2
-sky = SubResource("Sky_xc20r")
+background_color = Color(0.5003239, 0.72730494, 1, 1)
+sky = SubResource("Sky_62clm")
 ambient_light_source = 2
 ambient_light_color = Color(0.8278724, 0.7708778, 0.3049254, 1)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mtvsj"]
-
 [node name="Level1" type="Node3D" unique_id=1662966936]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1158018879]
-environment = SubResource("Environment_th1pm")
 
 [node name="PlatformBottomLeft" parent="." unique_id=1781846857 instance=ExtResource("1_1omn2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.0066648, 3.434503)
@@ -36,10 +42,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9577327, -5.062235)
 [node name="Node3D5" parent="." unique_id=371611218 instance=ExtResource("2_smh62")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.050943136, -7.0388317)
 
-[node name="PlatformTopLeft" type="MeshInstance3D" parent="." unique_id=962524248]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0152359, -0.97954994, -9.590101)
-mesh = ExtResource("3_smh62")
+[node name="PlatformTopMiddle" type="MeshInstance3D" parent="." unique_id=52581726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0340561, -1.0155686, -9.645974)
+mesh = ExtResource("3_ywuck")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlatformTopLeft" unique_id=385442945]
-transform = Transform3D(-0.78433263, 0, 0.62034047, 0, 1, 0, -0.62034047, 0, -0.78433263, 0, 0.77893025, 0)
-shape = SubResource("ConcavePolygonShape3D_mtvsj")
+[node name="RigidBody3D" type="StaticBody3D" parent="PlatformTopMiddle" unique_id=203562764]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PlatformTopMiddle/RigidBody3D" unique_id=1650431427]
+shape = SubResource("ConvexPolygonShape3D_getar")
+
+[node name="Tree4" type="MeshInstance3D" parent="PlatformTopMiddle" unique_id=1329883308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5850451, 0.934448, 0.75215054)
+mesh = ExtResource("4_62clm")
+
+[node name="SignRight" type="MeshInstance3D" parent="PlatformTopMiddle" unique_id=119082272]
+transform = Transform3D(-0.1880156, 0, 0.98216605, 0, 1, 0, -0.98216605, 0, -0.1880156, -0.63945115, 0.9758225, -0.179986)
+mesh = ExtResource("5_a877o")
+
+[node name="Rock4" type="MeshInstance3D" parent="." unique_id=8865315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6544998, -0.03373521, -9.408534)
+mesh = ExtResource("6_etgam")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1743250599]
+transform = Transform3D(0.20907243, 0, 0.97790015, 0, 1, 0, -0.97790015, 0, 0.20907243, 4.43567, 0, 0)
+fov = 82.886024
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=562724719]
+transform = Transform3D(0.41540778, -0.9096353, 0, 0.9096353, 0.41540778, 0, 0, 0, 1, 0, 5.359519, 0.7704489)
+light_color = Color(1, 0.8509804, 0, 1)
+light_energy = 16.0
+light_indirect_energy = 12.225
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1158018879]
+environment = SubResource("Environment_th1pm")
