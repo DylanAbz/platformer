@@ -25,4 +25,4 @@ current = true
 size = 8.0
 
 [node name="Player" parent="." unique_id=1762694975 instance=ExtResource("1_gy11q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3025393, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1677012, 0)
