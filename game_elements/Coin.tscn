@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://63lian4aea8k"]
+
+[ext_resource type="Script" uid="uid://dc2eq8jqmp3ek" path="res://scripts/game_elements/coin.gd" id="1_5lnlr"]
+[ext_resource type="PackedScene" uid="uid://tywy7wlyp30i" path="res://assets/maps/FBX/Coin.fbx" id="2_p0xup"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_svwm6"]
+radius = 0.4
+
+[node name="Coin" type="Area3D" unique_id=1317828895]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_5lnlr")
+
+[node name="Coin" parent="." unique_id=64283426 instance=ExtResource("2_p0xup")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=179839138]
+shape = SubResource("SphereShape3D_svwm6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

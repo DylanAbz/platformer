@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b1r6lv5c0voct" path="res://assets/maps/level/moving_platform.tscn" id="7_62clm"]
 [ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://scenes/player/Player.tscn" id="8_a877o"]
 [ext_resource type="PackedScene" uid="uid://cwkb5t66tll54" path="res://assets/maps/FBX/Platform_TopMiddle.fbx" id="10_e1fm8"]
+[ext_resource type="PackedScene" uid="uid://63lian4aea8k" path="res://game_elements/Coin.tscn" id="10_getar"]
 [ext_resource type="PackedScene" uid="uid://ii7daknu784l" path="res://assets/maps/FBX/Pipe.fbx" id="11_8vv8g"]
 [ext_resource type="PackedScene" uid="uid://yixueipi7u8t" path="res://assets/maps/FBX/Flag.fbx" id="12_tndj5"]
 
@@ -128,3 +129,63 @@ shape = SubResource("BoxShape3D_e1fm8")
 [node name="CollisionShapePipe" type="CollisionShape3D" parent="StaticBody3D" unique_id=1970746060]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.80108, 3.528595e-05, -0.117370605)
 shape = SubResource("BoxShape3D_8vv8g")
+
+[node name="Coin" parent="." unique_id=1317828895 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.4900007, 3.9285822, 0)
+
+[node name="Coin2" parent="." unique_id=1911270908 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.8171597, 3.384738, 0)
+
+[node name="Coin3" parent="." unique_id=1490259811 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 7.1900344, 3.384738, 0)
+
+[node name="Coin4" parent="." unique_id=1172769085 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 13.043153, 1.9122553, 0)
+
+[node name="Coin7" parent="." unique_id=1571278746 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 22.07607, 0.6230726, 0)
+
+[node name="Coin8" parent="." unique_id=975614947 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 22.96455, 0.6230726, 0)
+
+[node name="Coin9" parent="." unique_id=1025045499 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 23.864107, 0.6230726, 0)
+
+[node name="Coin10" parent="." unique_id=451401019 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 24.789295, 0.6230726, 0)
+
+[node name="Coin11" parent="." unique_id=220753843 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 25.717976, 0.6230726, 0)
+
+[node name="Coin12" parent="." unique_id=896281163 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 34.939137, 1.6605072, 0)
+
+[node name="Coin13" parent="." unique_id=1331485934 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 37.75368, 1.6605072, 0)
+
+[node name="Coin17" parent="." unique_id=172398494 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 53.9696, 1.6605072, 0)
+
+[node name="Coin19" parent="." unique_id=1714196082 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 61.042595, 1.6605072, 0)
+
+[node name="Coin20" parent="." unique_id=1076516606 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 60.49732, 0.92828107, 0)
+
+[node name="Coin18" parent="." unique_id=1563309554 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 54.62393, 0.92828107, 0)
+
+[node name="Coin14" parent="." unique_id=1696746766 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 35.564224, 2.2354248, 0)
+
+[node name="Coin15" parent="." unique_id=555859893 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 37.11339, 2.2354248, 0)
+
+[node name="Coin16" parent="." unique_id=329972178 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 36.351368, 2.5299041, 0)
+
+[node name="Coin5" parent="." unique_id=971277999 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.435754, 2.593279, 0)
+
+[node name="Coin6" parent="." unique_id=481673981 instance=ExtResource("10_getar")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 11.681107, 2.869369, 0)
