@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://rl4r2ave7fcv" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Head_CL.png" id="3_c3xxp"]
 [ext_resource type="Texture2D" uid="uid://cib581tyivrq2" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Head_DFL.png" id="4_npwbq"]
 [ext_resource type="Texture2D" uid="uid://beb7qt3vt0fkh" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Body_STT.png" id="5_v42im"]
-[ext_resource type="AnimationLibrary" path="res://characters/homer-simpson-fortnite-skin/animations/homer_anims.res" id="6_anim"]
+[ext_resource type="AnimationLibrary" uid="uid://clg8imub27eo8" path="res://characters/homer-simpson-fortnite-skin/animations/homer_anims.res" id="6_anim"]
+[ext_resource type="PackedScene" uid="uid://co418401y3bu7" path="res://assets/cannabis-joints/source/Joints.fbx" id="7_joint"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pn6s4"]
 albedo_texture = ExtResource("2_tpg5x")
@@ -28,18 +29,57 @@ script = ExtResource("1_c3xxp")
 [node name="Model" parent="." unique_id=701740308 instance=ExtResource("1_wr5hl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93063843, 0)
 
-[node name="M_MED_SilentNovel_Vane_LOD0" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D" parent_id_path=PackedInt32Array(701740308, 1414303306) index="0" unique_id=1431430827]
+[node name="Skeleton3D" parent="Model/M_MED_SilentNovel_Vane" parent_id_path=PackedInt32Array(701740308, 738459950) index="0" unique_id=1008003535]
+bones/1/position = Vector3(-0.0016121431, 0.90189, 0.008454928)
+bones/1/rotation = Quaternion(-0.035135638, -0.023836961, 0.00019645593, 0.9990983)
+bones/2/rotation = Quaternion(0.023805732, -0.0030522137, -0.012330745, 0.99963593)
+bones/4/rotation = Quaternion(0.045934413, -0.006410713, -0.017895985, 0.99876356)
+bones/6/rotation = Quaternion(0.045963433, -0.0067653377, -0.017702686, 0.9987633)
+bones/7/rotation = Quaternion(0.04388489, 0.034596927, 0.03506703, 0.99782145)
+bones/9/rotation = Quaternion(0.10918371, 0.22748874, -0.00035522284, 0.9676403)
+bones/84/rotation = Quaternion(0.54628706, 0.4310649, 0.45798576, -0.553175)
+bones/85/rotation = Quaternion(0.095441416, 0.807242, -0.546183, -0.20232564)
+bones/86/rotation = Quaternion(0.28609127, -0.6466466, 0.28609103, 0.6466466)
+bones/87/rotation = Quaternion(0.27787134, 0.7642258, -0.122600764, 0.5689601)
+bones/154/rotation = Quaternion(0.5408061, -0.42352724, -0.49676496, -0.5304508)
+bones/155/rotation = Quaternion(-0.5034206, 0.72947854, -0.40287244, 0.22830376)
+bones/156/rotation = Quaternion(0.56332916, 0.42738798, -0.56332916, 0.42738762)
+bones/157/rotation = Quaternion(-0.14085938, -0.7699346, -0.08823587, 0.61609566)
+bones/240/rotation = Quaternion(0.115353495, 0.04638623, 0.9891747, -0.07794501)
+bones/241/rotation = Quaternion(-0.022980297, 0.9756101, -0.20884284, 0.063573875)
+bones/242/rotation = Quaternion(-0.05196886, 0.7051413, -0.6974026, 0.11706699)
+bones/243/rotation = Quaternion(6.179926e-06, 0.99999994, 0.00031787157, 1.587652e-05)
+bones/267/rotation = Quaternion(-0.121221796, 0.07747367, 0.98432213, 0.102044754)
+bones/268/rotation = Quaternion(-0.0033418434, 0.9794271, -0.20123933, 0.014640536)
+bones/269/rotation = Quaternion(0.022708708, 0.6901764, -0.72252387, 0.03316806)
+bones/270/rotation = Quaternion(-1.2487088e-06, 1, 6.447802e-05, -3.223345e-06)
+
+[node name="M_MED_SilentNovel_Vane_LOD0" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D" index="0" unique_id=86101760]
 surface_material_override/0 = SubResource("StandardMaterial3D_pn6s4")
 surface_material_override/1 = SubResource("StandardMaterial3D_7oing")
 surface_material_override/2 = SubResource("StandardMaterial3D_5stf6")
 surface_material_override/3 = SubResource("StandardMaterial3D_180ig")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Model"]
-libraries = {
-&"": ExtResource("6_anim")
-}
+[node name="JointAttach" type="BoneAttachment3D" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D" index="1" unique_id=685920088]
+transform = Transform3D(0.2585645, 0.6220886, 0.7390199, 0.80102885, 0.28951013, -0.5239623, -0.5399048, 0.72745454, -0.42345372, -0.041794956, 1.1277591, 0.13252383)
+bone_name = "RightHand"
+bone_idx = 157
+
+[node name="Joint" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D/JointAttach" unique_id=827727074 instance=ExtResource("7_joint")]
+transform = Transform3D(1, 0, 0, 0, 1, -6.7055225e-08, 0, 6.7055225e-08, 1, 0.4490562, -0.113892876, 0.62992203)
+
+[node name="Joint Lit" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D/JointAttach/Joint" index="0" unique_id=1613245150]
+transform = Transform3D(56.681244, 114.56293, -381.37573, -168.8656, 370.53473, 100.15199, 572.94995, 97.87416, 67.24685, -0.45869043, 0.22379774, -0.6501601)
+
+[node name="Joint" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D/JointAttach/Joint" index="1" unique_id=448667429]
+transform = Transform3D(0, -254.87161, -1.5258789e-05, -1.8119812e-05, -7.6293945e-06, 254.87161, -254.87161, 1.1444092e-05, -5.722046e-06, -0.41706255, 0.5323738, 0.6688957)
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Model" unique_id=380652890]
+libraries/ = ExtResource("6_anim")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1586536971]
 shape = SubResource("CapsuleShape3D_gfjak")
 
 [editable path="Model"]
+[editable path="Model/M_MED_SilentNovel_Vane/Skeleton3D/JointAttach/Joint"]
