@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dg7w8oj0xccv" path="res://scenes/level/start_platform.tscn" id="1_q0vuy"]
 [ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://scenes/player/Player.tscn" id="2_pr0p5"]
 [ext_resource type="Texture2D" uid="uid://dwce1wiuhhpbk" path="res://assets/maps/sky1.jpg" id="3_pr0p5"]
+[ext_resource type="PackedScene" uid="uid://ceaiiu5jqnv1y" path="res://assets/maps/FBX/Platform_BottomLeft.fbx" id="4_vjjvc"]
+[ext_resource type="PackedScene" uid="uid://btkvieh7ig0m4" path="res://assets/maps/FBX/Platform_BottomMiddle.fbx" id="5_iakny"]
+[ext_resource type="PackedScene" uid="uid://bsaicdaaj3wno" path="res://assets/maps/FBX/Platform_BottomRight.fbx" id="6_p170t"]
+[ext_resource type="PackedScene" uid="uid://07iwtt0ogy8o" path="res://characters/monstre1/monstre1.tscn" id="7_0vpf3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jgnos"]
 panorama = ExtResource("3_pr0p5")
@@ -19,6 +23,9 @@ sky_rotation = Vector3(0, -1.8395771, 0)
 ambient_light_source = 2
 ambient_light_color = Color(0.8278724, 0.7708778, 0.3049254, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vjjvc"]
+size = Vector3(7.45166, 0.9844971, 3.180542)
+
 [node name="Level2" type="Node3D" unique_id=392321856]
 
 [node name="PlatformBottomLeft" parent="." unique_id=3334582 instance=ExtResource("1_q0vuy")]
@@ -33,3 +40,24 @@ fov = 97.5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=919872571]
 environment = SubResource("Environment_ney6i")
+
+[node name="Ch14_nonPBR" parent="." unique_id=1918294850 instance=ExtResource("7_0vpf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2693734, 0, -0.045443654)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=895151064]
+
+[node name="Platform_BottomLeft" parent="StaticBody3D" unique_id=1509842435 instance=ExtResource("4_vjjvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.181, -1.001, -0.59)
+
+[node name="Platform_BottomMiddle" parent="StaticBody3D" unique_id=1738322243 instance=ExtResource("5_iakny")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1578, -1.0090655, -0.59852076)
+
+[node name="Platform_BottomMiddle2" parent="StaticBody3D" unique_id=662882656 instance=ExtResource("5_iakny")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.115768, -1.0090655, -0.59852076)
+
+[node name="Platform_BottomRight" parent="StaticBody3D" unique_id=1191849447 instance=ExtResource("6_p170t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.109154, -1.0151634, -0.59852076)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1017347427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.167481, -0.49468595, -0.53082275)
+shape = SubResource("BoxShape3D_vjjvc")
