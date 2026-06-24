@@ -9,6 +9,7 @@ radius = 0.4
 [node name="Coin" type="Area3D" unique_id=1317828895]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_5lnlr")
+rotation_speed = null
 
 [node name="Coin" parent="." unique_id=64283426 instance=ExtResource("2_p0xup")]
 

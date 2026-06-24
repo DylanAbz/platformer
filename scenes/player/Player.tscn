@@ -23,7 +23,7 @@ albedo_texture = ExtResource("5_v42im")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfjak"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1762694975]
+[node name="Player" type="CharacterBody3D" unique_id=1762694975 groups=["player"]]
 script = ExtResource("1_c3xxp")
 
 [node name="Model" parent="." unique_id=701740308 instance=ExtResource("1_wr5hl")]
