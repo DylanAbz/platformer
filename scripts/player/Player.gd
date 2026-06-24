@@ -67,7 +67,13 @@ func rotate_model() -> void:
 		model.rotation.y = deg_to_rad(-90)
 
 func update_animation() -> void:
-	# "run" quand Homer avance, "idle" sinon (peu importe la map)
-	var target := "run" if absf(velocity.x) > 0.1 else "idle"
+	# en l'air -> "jump", sinon "run" s'il avance, sinon "idle"
+	var target: String
+	if not is_on_floor():
+		target = "jump"
+	elif absf(velocity.x) > 0.1:
+		target = "run"
+	else:
+		target = "idle"
 	if anim.current_animation != target:
 		anim.play(target)
