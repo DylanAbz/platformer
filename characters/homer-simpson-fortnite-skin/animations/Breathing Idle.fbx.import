@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://br3wxsd7uqmep"
-path="res://.godot/imported/Drunk_Run_Forward.fbx-0e11b6800aa3f70e3aceebfc91dd91ac.scn"
+uid="uid://dyswidtuskckn"
+path="res://.godot/imported/Breathing Idle.fbx-afd05bb5597d4667389345eb513349cc.scn"
 
 [deps]
 
-source_file="res://characters/homer-simpson-fortnite-skin/animations/Drunk_Run_Forward.fbx"
-dest_files=["res://.godot/imported/Drunk_Run_Forward.fbx-0e11b6800aa3f70e3aceebfc91dd91ac.scn"]
+source_file="res://characters/homer-simpson-fortnite-skin/animations/Breathing Idle.fbx"
+dest_files=["res://.godot/imported/Breathing Idle.fbx-afd05bb5597d4667389345eb513349cc.scn"]
 
 [params]
 
