@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b035fodg8tfp7"]
+
+[ext_resource type="PackedScene" uid="uid://1veplp1ro34w" path="res://characters/homer-simpson-fortnite-skin/source/Homer Simpson.fbx" id="1_wr5hl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfjak"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1762694975]
+
+[node name="Model" parent="." unique_id=701740308 instance=ExtResource("1_wr5hl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93063843, 0)
+
+[node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1586536971]
+shape = SubResource("CapsuleShape3D_gfjak")
