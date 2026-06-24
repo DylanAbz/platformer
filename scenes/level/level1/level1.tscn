@@ -83,15 +83,6 @@ mesh = ExtResource("5_a877o")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6204437, 0.9818334, 0.23744011)
 mesh = ExtResource("6_etgam")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=562724719]
-transform = Transform3D(0.8507652, -0.5255459, 0, 0.5255459, 0.8507652, 0, 0, 0, 1, 0, 6.0340466, -2.1479788)
-light_color = Color(1, 0.8509804, 0, 1)
-light_energy = 16.0
-light_indirect_energy = 12.225
-light_volumetric_fog_energy = 16.0
-light_size = 1.0
-light_specular = 16.0
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1158018879]
 environment = SubResource("Environment_th1pm")
 

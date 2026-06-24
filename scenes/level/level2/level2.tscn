@@ -1,3 +1,35 @@
 [gd_scene format=3 uid="uid://ckhwvsnpijf0g"]
 
+[ext_resource type="PackedScene" uid="uid://dg7w8oj0xccv" path="res://scenes/level/start_platform.tscn" id="1_q0vuy"]
+[ext_resource type="PackedScene" uid="uid://b035fodg8tfp7" path="res://scenes/player/Player.tscn" id="2_pr0p5"]
+[ext_resource type="Texture2D" uid="uid://dwce1wiuhhpbk" path="res://assets/maps/sky1.jpg" id="3_pr0p5"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jgnos"]
+panorama = ExtResource("3_pr0p5")
+
+[sub_resource type="Sky" id="Sky_62clm"]
+sky_material = SubResource("PanoramaSkyMaterial_jgnos")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_ney6i"]
+background_mode = 2
+background_color = Color(0.5003239, 0.72730494, 1, 1)
+sky = SubResource("Sky_62clm")
+sky_rotation = Vector3(0, -1.8395771, 0)
+ambient_light_source = 2
+ambient_light_color = Color(0.8278724, 0.7708778, 0.3049254, 1)
+
 [node name="Level2" type="Node3D" unique_id=392321856]
+
+[node name="PlatformBottomLeft" parent="." unique_id=3334582 instance=ExtResource("1_q0vuy")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.11325073, -0.9712735, -0.25710106)
+
+[node name="Player" parent="." unique_id=1762694975 instance=ExtResource("2_pr0p5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35674453, 1.8935895, 0.13083577)
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1781817421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40319014, -0.556816, 3.5053697)
+fov = 97.5
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=919872571]
+environment = SubResource("Environment_ney6i")
