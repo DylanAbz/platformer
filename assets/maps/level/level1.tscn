@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cp0ja86qpqpu3"]
+
+[ext_resource type="PackedScene" uid="uid://dg7w8oj0xccv" path="res://assets/maps/level/start_platform.tscn" id="1_1omn2"]
+[ext_resource type="PackedScene" uid="uid://bnvtlbp1mg4nl" path="res://assets/maps/level/yellow_box.tscn" id="2_smh62"]
+[ext_resource type="ArrayMesh" uid="uid://bosko4jsdypub" path="res://assets/maps/OBJ/Platform_TopLeft.obj" id="3_smh62"]
+
+[sub_resource type="Sky" id="Sky_xc20r"]
+
+[sub_resource type="Environment" id="Environment_th1pm"]
+background_mode = 2
+sky = SubResource("Sky_xc20r")
+ambient_light_source = 2
+ambient_light_color = Color(0.8278724, 0.7708778, 0.3049254, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mtvsj"]
+
+[node name="Level1" type="Node3D" unique_id=1662966936]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1158018879]
+environment = SubResource("Environment_th1pm")
+
+[node name="PlatformBottomLeft" parent="." unique_id=1781846857 instance=ExtResource("1_1omn2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1.0066648, 3.434503)
+
+[node name="Node3D" parent="." unique_id=1259626113 instance=ExtResource("2_smh62")]
+
+[node name="Node3D2" parent="." unique_id=1406635118 instance=ExtResource("2_smh62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9577327, -1.017343)
+
+[node name="Node3D3" parent="." unique_id=666910325 instance=ExtResource("2_smh62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9577327, -3.0346947)
+
+[node name="Node3D4" parent="." unique_id=1315858974 instance=ExtResource("2_smh62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9577327, -5.062235)
+
+[node name="Node3D5" parent="." unique_id=371611218 instance=ExtResource("2_smh62")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.050943136, -7.0388317)
+
+[node name="PlatformTopLeft" type="MeshInstance3D" parent="." unique_id=962524248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0152359, -0.97954994, -9.590101)
+mesh = ExtResource("3_smh62")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlatformTopLeft" unique_id=385442945]
+transform = Transform3D(-0.78433263, 0, 0.62034047, 0, 1, 0, -0.62034047, 0, -0.78433263, 0, 0.77893025, 0)
+shape = SubResource("ConcavePolygonShape3D_mtvsj")
