@@ -10,6 +10,7 @@ extends CharacterBody3D
 
 @onready var model: Node3D = $Model
 @onready var anim: AnimationPlayer = $Model/AnimationPlayer
+@onready var joint: Node3D = $Model/M_MED_SilentNovel_Vane/Skeleton3D/JointAttach/Joint
 
 var locked_z: float
 var input_direction: float = 0.0
@@ -18,6 +19,10 @@ var is_rolling: bool = false
 
 func _ready() -> void:
 	locked_z = global_position.z
+	# le modèle de joint contient 2 meshes superposés -> on garde "Joint Lit", on masque l'autre
+	for child in joint.get_children():
+		if child is MeshInstance3D and not String(child.name).contains("Lit"):
+			child.visible = false
 
 func _physics_process(delta: float) -> void:
 	read_input()
@@ -74,6 +79,7 @@ func update_animation() -> void:
 	var on_floor := is_on_floor()
 	var just_landed := on_floor and not was_on_floor
 	was_on_floor = on_floor
+	joint.visible = false  # le joint n'apparaît que pendant l'emote "smoke"
 
 	# atterrissage après un vol -> roulade
 	if just_landed:
@@ -89,6 +95,13 @@ func update_animation() -> void:
 			return
 		else:
 			is_rolling = false
+
+	# fumer : touche F maintenue, au sol et immobile (le joint apparaît dans la main)
+	if on_floor and Input.is_action_pressed("smoke") and absf(velocity.x) < 0.1:
+		if anim.current_animation != "smoke":
+			anim.play("smoke")
+		joint.visible = true
+		return
 
 	# danse : touche B maintenue, au sol et immobile
 	if on_floor and Input.is_action_pressed("dance") and absf(velocity.x) < 0.1:
