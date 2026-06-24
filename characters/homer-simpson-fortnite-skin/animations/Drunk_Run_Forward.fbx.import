@@ -37,7 +37,17 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:Skeleton3D": {
+"retarget/bone_map": Resource("res://characters/homer-simpson-fortnite-skin/bonemap_mixamo.tres"),
+"retarget/bone_renamer/rename_bones": true,
+"retarget/bone_renamer/unique_node/make_unique": false,
+"retarget/rest_fixer/apply_node_transforms": true,
+"retarget/rest_fixer/normalize_position_tracks": true
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

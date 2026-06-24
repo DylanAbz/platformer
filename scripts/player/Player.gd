@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var gravity: float = 25.0
 
 @onready var model: Node3D = $Model
+@onready var anim: AnimationPlayer = $Model/AnimationPlayer
 
 var locked_z: float
 var input_direction: float = 0.0
@@ -23,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	force_depth_position()
 	rotate_model()
+	update_animation()
 
 func read_input() -> void:
 	input_direction = 0.0
@@ -63,3 +65,9 @@ func rotate_model() -> void:
 		model.rotation.y = deg_to_rad(90)
 	elif input_direction < 0:
 		model.rotation.y = deg_to_rad(-90)
+
+func update_animation() -> void:
+	# "run" quand Homer avance, "idle" sinon (peu importe la map)
+	var target := "run" if absf(velocity.x) > 0.1 else "idle"
+	if anim.current_animation != target:
+		anim.play(target)
