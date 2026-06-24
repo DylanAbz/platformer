@@ -90,6 +90,12 @@ func update_animation() -> void:
 		else:
 			is_rolling = false
 
+	# danse : touche B maintenue, au sol et immobile
+	if on_floor and Input.is_action_pressed("dance") and absf(velocity.x) < 0.1:
+		if anim.current_animation != "dance":
+			anim.play("dance")
+		return
+
 	# en l'air -> "jump", sinon "run" s'il avance, sinon "idle"
 	var target: String
 	if not on_floor:
