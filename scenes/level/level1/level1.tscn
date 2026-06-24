@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dwce1wiuhhpbk" path="res://assets/maps/sky1.jpg" id="8_gfucf"]
 [ext_resource type="PackedScene" uid="uid://cpy4lmce38l33" path="res://scenes/level/end_platform.tscn" id="10_getar"]
 [ext_resource type="PackedScene" uid="uid://63lian4aea8k" path="res://game_elements/Coin.tscn" id="12_2la47"]
+[ext_resource type="Script" uid="uid://ckmgsj0fv6p3w" path="res://scripts/coin_label.gd" id="13_3rmup"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_getar"]
 points = PackedVector3Array(-0.98204446, 0.87129456, -1.1650296, 0.98980975, 0.39972362, 1.7164918, 0.9741095, 0.12955841, 1.6893294, 0.98983884, 0.39973542, -1.7165422, -0.99912214, -0.99912214, -1.5627824, -0.9990621, -0.9990621, 1.5626882, 0.99443626, -0.99912214, -1.5627824, -0.9873198, 0.66311425, 1.5442784, 0.99437624, -0.9990621, 1.5626882, 0.96720564, 0.96720564, 0.6813967, -0.9945379, 0.39974076, -1.7165651, 0.9773586, 0.87129456, -1.1650296, -0.9718915, 0.96720564, 0.6813967, -0.9945088, 0.39972898, 1.7165147, -0.9718915, 0.96720564, -0.6813967, 0.98178864, 0.8220695, 1.2769612, 0.96720564, 0.96720564, -0.6813967, -0.9873675, 0.66314644, -1.544353, -0.98204446, 0.87129456, 1.1650296, 0.9934361, 0.50899774, -1.6688029, 0.99338794, 0.508973, 1.6687222, 0.9749126, 0.7107016, -1.4792135, -0.9981526, 0.5090135, -1.6688542, 0.98260367, 0.66309375, 1.5442308, -0.99810445, 0.50898874, 1.6687735, 0.9773586, 0.87129456, 1.1650296, -0.98648286, 0.8220765, -1.2769719, 0.9741138, 0.12955901, -1.6893369, -0.9795684, 0.7106797, 1.479168, 0.9826513, 0.66312593, -1.5443056, -0.9864745, 0.8220695, 1.2769612, 0.981797, 0.8220765, -1.2769719)
@@ -170,3 +171,14 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12.435754, 2.593279, 0)
 
 [node name="Coin6" parent="." unique_id=1217691870 instance=ExtResource("12_2la47")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 11.681107, 2.869369, 0)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=816917172]
+
+[node name="CoinLabel" type="Label" parent="HUD" unique_id=460081589]
+offset_left = 1064.0
+offset_top = 16.0
+offset_right = 1135.0
+offset_bottom = 39.0
+text = "Pièces : 0"
+script = ExtResource("13_3rmup")
+metadata/_edit_use_anchors_ = true

@@ -12,5 +12,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	if player.position.y < -30 : 
-			get_tree().reload_current_scene()
+	if player.position.y < -30:
+		GameManager.reset()
+		get_tree().reload_current_scene()

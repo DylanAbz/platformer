@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://rl4r2ave7fcv" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Head_CL.png" id="3_c3xxp"]
 [ext_resource type="Texture2D" uid="uid://cib581tyivrq2" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Head_DFL.png" id="4_npwbq"]
 [ext_resource type="Texture2D" uid="uid://beb7qt3vt0fkh" path="res://characters/homer-simpson-fortnite-skin/textures/T_SilentNovel_Vane_Body_STT.png" id="5_v42im"]
-[ext_resource type="AnimationLibrary" path="res://characters/homer-simpson-fortnite-skin/animations/homer_anims.res" id="6_anim"]
+[ext_resource type="AnimationLibrary" uid="uid://df0lbgbnnlyhc" path="res://characters/homer-simpson-fortnite-skin/animations/homer_anims.res" id="6_anim"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pn6s4"]
 albedo_texture = ExtResource("2_tpg5x")
@@ -22,22 +22,20 @@ albedo_texture = ExtResource("5_v42im")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gfjak"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1762694975]
+[node name="Player" type="CharacterBody3D" unique_id=1762694975 groups=["player"]]
 script = ExtResource("1_c3xxp")
 
 [node name="Model" parent="." unique_id=701740308 instance=ExtResource("1_wr5hl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93063843, 0)
 
-[node name="M_MED_SilentNovel_Vane_LOD0" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D" parent_id_path=PackedInt32Array(701740308, 1414303306) index="0" unique_id=1431430827]
+[node name="M_MED_SilentNovel_Vane_LOD0" parent="Model/M_MED_SilentNovel_Vane/Skeleton3D" parent_id_path=PackedInt32Array(701740308, 1016596023) index="0" unique_id=148790747]
 surface_material_override/0 = SubResource("StandardMaterial3D_pn6s4")
 surface_material_override/1 = SubResource("StandardMaterial3D_7oing")
 surface_material_override/2 = SubResource("StandardMaterial3D_5stf6")
 surface_material_override/3 = SubResource("StandardMaterial3D_180ig")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Model"]
-libraries = {
-&"": ExtResource("6_anim")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Model" unique_id=1982211626]
+libraries/ = ExtResource("6_anim")
 
 [node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=1586536971]
 shape = SubResource("CapsuleShape3D_gfjak")
